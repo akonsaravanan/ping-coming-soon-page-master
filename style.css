@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+
+/* ### Primary
+
+- Blue: hsl(223, 87%, 63%)
+
+### Secondary
+
+- Pale Blue: hsl(223, 100%, 88%)
+- Light Red: hsl(354, 100%, 66%)
+
+### Neutral
+
+- Gray: hsl(0, 0%, 59%)
+- Very Dark Blue: hsl(209, 33%, 12%) */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Libre Franklin", sans-serif;
+  margin: 0 auto;
+  min-height: 100vh;
+  width: 100%;
+  padding: 10px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 2% 1rem;
+}
+
+header img {
+  width: 50px;
+  margin-bottom: 20px;
+}
+
+.hero img {
+  width: 100%;
+}
+
+header h1 {
+  color: hsl(0, 0%, 59%);
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+header h1 span {
+  color: hsl(209, 33%, 12%);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.sub-heading {
+  font-size: 12px;
+  margin-bottom: 20px;
+  color: hsl(209, 33%, 12%);
+}
+
+.form-section {
+  width: 100%;
+}
+
+form input[type="email"] {
+  width: 90%;
+  height: 40px;
+  border-radius: 50px;
+  padding-left: 20px;
+  font-size: 12px;
+  border: 1px solid hsl(223, 100%, 88%);
+  margin-bottom: 10px;
+  outline: none;
+  position: relative;
+}
+
+form input[type="email"]::placeholder {
+  color: hsl(223, 100%, 88%);
+}
+form input[type="submit"] {
+  cursor: pointer;
+  text-align: center;
+  width: 90%;
+  height: 40px;
+  border-radius: 50px;
+  background-color: hsl(223, 87%, 63%);
+  color: #fff;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  margin-bottom: 20px;
+  box-shadow: 1px 4px 6px 0 #71aaeb99;
+}
+
+.copyright {
+  margin-top: 20px;
+  font-size: 8px;
+  color: hsl(0, 0%, 59%);
+  font-weight: 500;
+}
+.icons a {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid hsl(227, 47%, 96%);
+  border-radius: 50px;
+  font-size: 14px;
+}
+
+.icons a i {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: hsl(223, 87%, 63%);
+  position: absolute;
+}
+
+form.error .error-text {
+  color: hsl(354, 100%, 66%);
+  margin-bottom: 20px;
+  font-size: 12px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+form.error input[type="email"] {
+  border: 1px solid hsl(354, 100%, 66%);
+}
+
+form input[type="submit"]:hover {
+  background-color: hsl(224, 61%, 73%);
+  color: #fff;
+}
+
+.icons a:hover,
+.icons a i:hover {
+  background-color: rgb(85, 85, 240);
+  color: white !important;
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 20px;
+  }
+  .form-section {
+    max-width: 750px;
+  }
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+  }
+  form input[type="email"] {
+    margin: 0;
+    width: 50%;
+  }
+
+  form input[type="submit"] {
+    width: 30%;
+    margin: 0;
+  }
+  .hero img {
+    margin-top: 30px;
+    width: 700px;
+  }
+  form.error input[type="email"] {
+    margin: 0;
+  }
+  form.error .error-text {
+    position: absolute;
+    left: 10%;
+    top: 115%;
+  }
+}
